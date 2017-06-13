@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="cv"></div>
+
+  <!--引入 全局对象Fly-->
+  <script src="./js/fly.js"></script>
+  <!--引入 小鸟对象-->
+  <script src="./js/bird.js"></script>
+  <!--引入 天空对象-->
+  <script src="./js/sky.js"></script>
+  <!--引入 陆地对象-->
+  <script src="./js/land.js"></script>
+  <!--引入 管道对象-->
+  <script src="./js/pipe.js"></script>
+  <!--引入 Game对象-->
+  <script src="./js/game.js"></script>
+
+  <script>
+    // 创建游戏对象的时候，动态生成一个canvas
+    /*var cv = document.getElementById('cv');
+    cv.width = 800;
+    cv.height = 600;
+    cv.style.border = '1px solid red';
+    var context = cv.getContext('2d');*/
+
+    // 创建Game对象
+    // var game = new Fly.Game({
+    //   id: 'cv'
+    // });
+
+    // 使用 单例模式 创建Game实例对象
+    var game = Fly.getGame({
+      id: 'cv'
+    });
+    
+    game.start();
+  </script>
+</body>
+
+</html>
